@@ -5,7 +5,7 @@
 
 Summary:	A libmemcached library interface for PHP
 Name:		php-%{modname}
-Version:	0.1.5
+Version:	0.2.0
 Release:	%mkrel 1
 Group:		Development/PHP
 License:	PHP License
