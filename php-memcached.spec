@@ -5,12 +5,12 @@
 
 Summary:	A libmemcached library interface for PHP
 Name:		php-%{modname}
-Version:	3.0.0
+Version:	3.0.4
 Release:	1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/memcached
-Source0:	http://pecl.php.net/get/%{name}-%{version}.tar.gz
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 BuildRequires:	libmemcached-devel >= 0.38
 BuildRequires:	php-devel >= 3:5.2.1
@@ -23,7 +23,8 @@ memcached servers.
 
 %prep
 
-%setup -q
+%setup -n %{modname}-%{version}
+mv %{_builddir}/package.xml %{_builddir}/%{modname}-%{version}/
 
 cp %{SOURCE1} %{inifile}
 
@@ -37,7 +38,7 @@ find -type f | grep -v ".gif" | grep -v ".png" | grep -v ".jpg" | xargs dos2unix
 %serverbuild
 
 phpize
-%configure2_5x --with-libdir=%{_lib} \
+%configure --with-libdir=%{_lib} \
     --enable-%{modname}=shared,%{_prefix} \
     --with-zlib-dir=%{_prefix}
 

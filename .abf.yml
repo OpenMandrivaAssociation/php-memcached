@@ -1,2 +1,3 @@
 sources:
+  memcached-3.0.4.tgz: 0080eb5db45c2243a21a78c866aca984524e9f3f
   php-memcached-3.0.0.tar.gz: 26f44684fa321693621e55ccd68e7ac0bf568e77
