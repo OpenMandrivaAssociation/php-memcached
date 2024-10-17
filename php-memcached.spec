@@ -9,7 +9,7 @@ Version:	3.0.4
 Release:	2
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/memcached
+URL:		https://pecl.php.net/package/memcached
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 BuildRequires:	libmemcached-devel >= 0.38
